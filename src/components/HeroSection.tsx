@@ -2,6 +2,7 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from './ui/button';
+import { Link as ScrollLink } from 'react-scroll';
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -13,7 +14,7 @@ const HeroSection = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1466442929976-97f336a657be?ixlib=rb-4.0.3')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3')",
             filter: "brightness(0.7)"
           }}
         ></div>
@@ -29,9 +30,18 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-gulf-sand mb-8">
             {t('hero.subtitle')}
           </p>
-          <Button className="bg-gulf-gold hover:bg-gulf-gold/90 text-gulf-navy font-medium px-6 py-3 text-lg">
-            {t('hero.cta')}
-          </Button>
+          <div className="flex flex-wrap gap-4">
+            <ScrollLink to="about" smooth={true} duration={500} offset={-100}>
+              <Button className="bg-gulf-gold hover:bg-gulf-gold/90 text-gulf-navy font-medium px-6 py-3 text-lg">
+                {t('hero.cta')}
+              </Button>
+            </ScrollLink>
+            <ScrollLink to="contact" smooth={true} duration={500} offset={-100}>
+              <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium px-6 py-3 text-lg">
+                {t('nav.contact')}
+              </Button>
+            </ScrollLink>
+          </div>
         </div>
       </div>
     </div>

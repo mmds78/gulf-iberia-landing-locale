@@ -13,12 +13,12 @@ const LanguageToggle = () => {
 
   return (
     <Button 
-      variant="ghost" 
+      variant="outline" 
       onClick={toggleLanguage}
-      className="flex items-center space-x-2 text-white hover:bg-white/10"
+      className="flex items-center space-x-2 text-white border-white hover:bg-white/10"
     >
       <Globe className="h-4 w-4" />
-      <span>{language === 'en' ? 'ES' : 'EN'}</span>
+      <span className="font-medium">{language === 'en' ? 'Español' : 'English'}</span>
     </Button>
   );
 };
