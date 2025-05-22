@@ -1,12 +1,13 @@
 
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { Mail } from 'lucide-react';
 
 const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-gulf-navy text-white py-12">
+    <footer className="bg-gulf-navy text-white py-12" id="contact">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -20,7 +21,12 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Email: info@gulfiberia.com</p>
+              <p className="flex items-center">
+                <Mail className="h-4 w-4 mr-2" /> 
+                <a href="mailto:info@gulfiberia.com" className="hover:text-gulf-gold transition-colors">
+                  info@gulfiberia.com
+                </a>
+              </p>
               <p>Phone: +34 91 123 4567</p>
               <p>UAE: +971 5 123 4567</p>
             </div>

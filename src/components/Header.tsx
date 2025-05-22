@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageToggle from './LanguageToggle';
+import { Link } from 'react-scroll';
 
 const Header = () => {
   const { t } = useLanguage();
@@ -32,18 +33,18 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex space-x-6 items-center">
-          <a href="#" className="text-white hover:text-gulf-gold transition-colors">
+          <Link to="hero" spy={true} smooth={true} offset={-100} duration={500} className="text-white hover:text-gulf-gold transition-colors cursor-pointer">
             {t('nav.home')}
-          </a>
-          <a href="#about" className="text-white hover:text-gulf-gold transition-colors">
+          </Link>
+          <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="text-white hover:text-gulf-gold transition-colors cursor-pointer">
             {t('nav.about')}
-          </a>
-          <a href="#services" className="text-white hover:text-gulf-gold transition-colors">
+          </Link>
+          <Link to="services" spy={true} smooth={true} offset={-100} duration={500} className="text-white hover:text-gulf-gold transition-colors cursor-pointer">
             {t('nav.services')}
-          </a>
-          <a href="#contact" className="text-white hover:text-gulf-gold transition-colors">
+          </Link>
+          <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} className="text-white hover:text-gulf-gold transition-colors cursor-pointer">
             {t('nav.contact')}
-          </a>
+          </Link>
           <LanguageToggle />
         </div>
 

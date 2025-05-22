@@ -15,7 +15,7 @@ const LanguageToggle = () => {
     <Button 
       variant="outline" 
       onClick={toggleLanguage}
-      className="flex items-center space-x-2 text-white border-white hover:bg-white/10"
+      className="flex items-center space-x-2 bg-gulf-gold text-gulf-navy border-gulf-gold hover:bg-gulf-gold/90"
     >
       <Globe className="h-4 w-4" />
       <span className="font-medium">{language === 'en' ? 'Español' : 'English'}</span>
